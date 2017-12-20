@@ -20,4 +20,20 @@ class ProxiBlue_ReCaptcha_Block_Captcha_Recaptcha extends Mage_Captcha_Block_Cap
         return false;
     }
 
+    /**
+     * Gets the full Recaptcha JavaScript URL
+     *
+     * @param array $params  Extra parameters to pass to the URL
+     * @return string
+     */
+    public function getRecaptchaJsUrl(array $params = [])
+    {
+        $language = $this->helper('proxiblue_recaptcha')->getConfigNode('language');
+        $params['render'] = 'explicit';
+        if ($language) {
+            $params['hl'] = $language;
+        }
+        return ProxiBlue_ReCaptcha_Helper_Data::RECAPTCHA_BASE_URL . '?' . http_build_query($params);
+    }
+
 }
