@@ -82,7 +82,7 @@
             <captcha>
                 <type>recaptcha</type>
                 <theme>New</theme>
-                <language>en</language>
+                <language></language>
                 <mode>always</mode>
             </captcha>
         </admin>
@@ -90,7 +90,7 @@
             <captcha>
                 <type>recaptcha</type>
                 <theme>New</theme>
-                <language>en</language>
+                <language></language>
                 <mode>always</mode>
             </captcha>
         </customer>

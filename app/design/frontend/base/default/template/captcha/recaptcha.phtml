@@ -30,7 +30,7 @@
         };
     </script>
     <script
-            src="https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&render=explicit&hl=<?php echo $captcha->getLanguage(); ?>"
+            src="<?php echo $this->escapeHtml($this->getRecaptchaJsUrl(['onload' => 'reCaptchaCallback'])); ?>"
             async
             defer></script>
 <?php endif; ?>
